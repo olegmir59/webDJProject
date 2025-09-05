@@ -1,11 +1,8 @@
-<nav class="navbar navbar-expand navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'index' %}">Мой новый сайт</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+<div class="d-flex">
+    <div class="flex-shrink-0">
+        <nav class="navbar navbar-dark bg-dark flex-column">
+            <a class="navbar-brand" href="{% url 'index' %}">DanceDjango</a>
+            <ul class="navbar-nav flex-column">
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'index' %}">Главная</a>
                 </li>
@@ -19,6 +16,10 @@
                     <a class="nav-link" href="{% url 'services' %}">Услуги</a>
                 </li>
             </ul>
-        </div>
+        </nav>
     </div>
-</nav>
+    <div class="flex-grow-1">
+        <!-- Основное содержимое страницы -->
+        {% block content %}{% endblock %}
+    </div>
+</div>

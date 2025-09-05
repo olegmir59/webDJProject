@@ -28,29 +28,36 @@ form {
 }
 
 /* Стили для меню */
+.navbar {
+    background-color: #f0f0f0; /* Светло-серый цвет фона */
+}
+
+.navbar-brand {
+    color: red; /* Красный цвет текста */
+    font-size: 1.5rem; /* Увеличенный размер шрифта */
+}
+
 .navbar-nav .nav-link {
-    color: blue !important; /* Синий цвет текста */
+    color: #007bff !important; /* Ярко-синий цвет текста */
     font-size: 1.2rem; /* Увеличенный размер шрифта */
 }
 
-/* Вывод меню в одну строку */
-.navbar-nav {
-    flex-direction: row;
-    align-items: center;
+/* Изменение цвета текста на зеленый при наведении мыши */
+.navbar-nav .nav-link:hover {
+    color: green !important; /* Зеленый цвет текста при наведении */
 }
 
-.navbar-nav .nav-item {
-    margin-left: 10px; /* Добавляем отступ между пунктами меню */
+/* Боковая панель */
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    padding: 20px;
 }
 
-/* Вывод меню в одну строку на больших экранах */
-@media (min-width: 992px) {
-    .navbar-nav {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .navbar-nav .nav-item {
-        margin-left: 10px; /* Добавляем отступ между пунктами меню */
-    }
+/* Основное содержимое */
+.flex-grow-1 {
+    margin-right: 250px; /* Ширина боковой панели */
 }
